@@ -8,6 +8,6 @@ namespace OnLineShop2026.Models
 
         public string Email { get; set; }
 
-        public string AvatarUrl { get; set; } = "/images/default.png";
+        public string AvatarUrl { get; set; } = "/images/default.jpg";
     }
 }
