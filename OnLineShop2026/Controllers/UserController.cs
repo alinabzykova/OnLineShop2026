@@ -7,11 +7,12 @@ namespace OnLineShop2026.Controllers
     {
         public IActionResult Index()
         {
-            var user = new User
-            {
-                FullName = "Алина Бзыкова",
-                Email = "bzykovaaa@gmail.com"
-            };
+            User user = new User(
+                "Алина",
+                "Бзыкова",
+                "bzykovaaa@gmail.com",
+                "/images/defaultImage.jpg"
+            );
 
             return View(user);
         }
