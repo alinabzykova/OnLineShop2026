@@ -1,11 +1,14 @@
 ﻿@model OnLineShop2026.Models.User
 
-<div class="container mt-5">
-    <div class="card mx-auto" style="width: 20rem;">
-        <img src="@Model.AvatarUrl" class="card-img-top" alt="avatar">
-        <div class="card-body text-center">
-            <h5 class="card-title">@Model.FullName</h5>
-            <p class="card-text">@Model.Email</p>
+<div class="text-left">
+    <h1 class="display-4 text-center">Профиль</h1>
+
+    <div style="display: flex; justify-content: center; gap: 1rem; align-items: center;">
+        <div>
+            <h4>@Model.FullName</h4>
+            <p>@Model.Email</p>
         </div>
+
+        <img style="width: 8rem; height: 8rem;" src="@Model.Avatar" alt="avatar" />
     </div>
 </div>
