@@ -1,14 +1,31 @@
-﻿@model OnLineShop2026.Models.User
+﻿@model List<OnLineShop2026.Models.User>
 
-<div class="text-left">
-    <h1 class="display-4 text-center">Профиль</h1>
+<h1>Пользователи</h1>
 
-    <div style="display: flex; justify-content: center; gap: 1rem; align-items: center;">
-        <div>
-            <h4>@Model.FullName</h4>
-            <p>@Model.Email</p>
-        </div>
+<table class="table table-bordered">
 
-        <img style="width: 8rem; height: 8rem;" src="@Model.Avatar" alt="avatar" />
-    </div>
-</div>
+    <thead>
+        <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var user in Model)
+        {
+            <tr onclick="location.href='@Url.Action("Details", "User", new { id = user.Id })'"
+                style="cursor:pointer">
+
+                <td>@user.FirstName</td>
+                <td>@user.LastName</td>
+                <td>@user.Email</td>
+
+            </tr>
+        }
+
+    </tbody>
+
+</table>
